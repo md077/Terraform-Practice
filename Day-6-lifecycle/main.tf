@@ -1,10 +1,8 @@
-resource "aws_instance" "name" {
-  
-  ami = "ami-07ff62358b87c7116"
-  instance_type = "t3.micro"
+resource "aws_instance" "dev" {
+    ami = "ami-07ff62358b87c7116"
+    instance_type = "t3.medium"
 
-   availability_zone = "us-east-1a"
-    tags = {
+     tags = {
         Name = "dev"
     }
 
@@ -14,4 +12,5 @@ resource "aws_instance" "name" {
       ignore_changes = [ tags,]
 
     }
+  
 }
